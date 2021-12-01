@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace AoC
 {
@@ -37,6 +38,7 @@ namespace AoC
             {
                 countsIncremented += rows[i - 1] < rows[i] ? 1 : 0;
             }
+
             return countsIncremented;
         }
 
