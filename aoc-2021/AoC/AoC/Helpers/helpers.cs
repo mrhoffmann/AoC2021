@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace AoC.Helpers
+namespace AoC
 {
-    internal class helpers
+    public static class Helpers
     {
+        public static int[] GetInput(string file) =>  Array.ConvertAll(System.IO.File.ReadAllLines(System.IO.Path.GetFullPath(@"..\..\") + @"\Inputs\" + file + ".txt"), s => int.Parse(s));
     }
 }

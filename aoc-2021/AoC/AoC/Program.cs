@@ -1,13 +1,9 @@
 ﻿using System;
-using System.IO;
 
 namespace AoC
 {
     internal class Program
     {
-        static string currentProjectFolder = System.IO.Path.GetFullPath(@"..\..\");
-        static string fileFolder = currentProjectFolder + @"\Inputs\";
-
         static void Main(string[] args)
         {
             Console.WriteLine(Sonar_Sweep_Part1());
@@ -35,7 +31,7 @@ namespace AoC
         static int Sonar_Sweep_Part1()
         {
             var countsIncremented = 1;
-            var rows  = Array.ConvertAll(File.ReadAllLines(fileFolder + "SonarSweep.txt"), s => int.Parse(s));
+            var rows = Helpers.GetInput("SonarSweep");
 
             for(var i = 1; i < rows.Length - 1; i++)
             {
@@ -47,6 +43,8 @@ namespace AoC
         /// <summary>
         /// https://adventofcode.com/2021/day/1
         /// https://adventofcode.com/2021/day/1/input
+        /// 
+        /// Part 2
         /// 
         /// A: 607 (N/A - no previous sum)
         /// B: 618 (increased)
@@ -62,7 +60,7 @@ namespace AoC
         static int Sonar_Sweep_Part2()
         {
             int previousSum = 0, countsIncremented = 0;
-            var rows = Array.ConvertAll(File.ReadAllLines(fileFolder + "SonarSweep_Part2.txt"), s => int.Parse(s));
+            var rows = Helpers.GetInput("SonarSweep_Part2");
 
             for (var i = 1; i < rows.Length - 1; i++)
             {
