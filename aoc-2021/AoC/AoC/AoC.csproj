@@ -49,8 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Days\One\SonarSweep.cs" />
-    <Compile Include="Days\Two\Navigation.cs" />
+    <Compile Include="Days\One\DayOne.cs" />
+    <Compile Include="Days\Two\DayTwo.cs" />
     <Compile Include="Helpers\helpers.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -61,8 +61,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Inputs\Days\Two\Part1.txt" />
-    <Content Include="Inputs\Days\One\SonarSweep.txt" />
-    <Content Include="Inputs\Days\One\SonarSweep_Part2.txt" />
+    <Content Include="Inputs\Days\One\Part1.txt" />
+    <Content Include="Inputs\Days\One\Part2.txt" />
     <Content Include="Inputs\Days\Two\Part2.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

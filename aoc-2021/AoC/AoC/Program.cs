@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace AoC
 {
@@ -6,9 +7,38 @@ namespace AoC
     {
         static void Main(string[] args)
         {
-            var result = new DayTwo().Run();
-            Console.WriteLine($"Part 1: {result.Part1}");
-            Console.WriteLine($"Part 2: {result.Part2}");
+            foreach 
+            (
+                var type in (from a in AppDomain.CurrentDomain.GetAssemblies() from b in a.GetTypes() select b)
+                .Where(c => c.Name.StartsWith("Day") && 
+                !(new string[]
+                {
+                    "DayOfWeek",
+                    "DaylightTime",
+                    "DaylightTimeStruct"
+                })
+                .Contains(c.Name))
+                .ToList()
+            )
+            {
+                Console.WriteLine($"Day {type.Name.Substring(3, type.Name.Length - 3).ToLower()}");
+                string[] values = 
+                    type
+                    .GetMethod("Run")
+                    .Invoke(
+                        type
+                        .GetConstructor(Type.EmptyTypes)
+                        .Invoke(
+                            new object[] { }),
+                            new object[] { type.Name.Substring(3, type.Name.Length - 3) })
+                                .ToString()
+                                .Replace("(", string.Empty)
+                                .Replace(")", string.Empty)
+                                .Split(new char[] { ',' });
+
+                for(var i = 0; i < values.Length; i++)
+                    Console.WriteLine($"\tPart {i}: {values[i].Trim()}");
+            }
             Console.ReadKey();
         }
     }

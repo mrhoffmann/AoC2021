@@ -1,15 +1,10 @@
-﻿using System;
-using System.Text.RegularExpressions;
-
-namespace AoC
+﻿namespace AoC
 {
     public class DayTwo
     {
-        private readonly string Day = @"Two\Part";
-
-        public (int Part1, int Part2) Run() =>  (
-            new Excersize().Run(Helpers.GetStringInput($@"{Day}1")),
-            new ExcersizeTwo().Run(Helpers.GetStringInput($@"{Day}2"))
+        public (int Part1, int Part2) Run(string day) =>  (
+            new Excersize().Run(Helpers.GetStringInput($@"{day}\Part1")),
+            new ExcersizeTwo().Run(Helpers.GetStringInput($@"{day}\Part2"))
         );
     }
 
@@ -69,7 +64,7 @@ namespace AoC
         protected virtual void Move(string s)
         {
             var direction = s.Substring(0, s.IndexOf(' '));
-            Regex r = new Regex($@"{direction} (\d)");
+            System.Text.RegularExpressions.Regex r = new System.Text.RegularExpressions.Regex($@"{direction} (\d)");
             var extractedValue = Helpers.IntegerValueFromDirection(s);
 
             if (r.IsMatch(s))
