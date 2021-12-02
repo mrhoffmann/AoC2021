@@ -49,6 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Days\One\SonarSweep.cs" />
+    <Compile Include="Days\Two\Navigation.cs" />
     <Compile Include="Helpers\helpers.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -58,8 +60,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Inputs\SonarSweep.txt" />
-    <Content Include="Inputs\SonarSweep_Part2.txt" />
+    <Content Include="Inputs\Days\Two\Part1.txt" />
+    <Content Include="Inputs\Days\One\SonarSweep.txt" />
+    <Content Include="Inputs\Days\One\SonarSweep_Part2.txt" />
+    <Content Include="Inputs\Days\Two\Part2.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
