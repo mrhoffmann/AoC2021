@@ -2,9 +2,9 @@
 using System.Linq;
 using System.Reflection;
 
-namespace AoC
+namespace AoC.Days
 {
-    internal class DayThree : Day
+    public class Three : Day
     {
         private string Gamma, Epsilon;
 
@@ -15,7 +15,7 @@ namespace AoC
 
         public int Part1()
         {
-            var rows = Helpers.GetStringInput($@"{this.GetType().Name.Substring(3, this.GetType().Name.Length - 3)}\{MethodBase.GetCurrentMethod().Name}");
+            var rows = Helpers.GetStringInput($@"{this.GetType().Name}\{MethodBase.GetCurrentMethod().Name}");
 
             for (var i = 0; i < rows[0].Length; i++) {
                 var zeroes = rows.Where(x => x[i] == '0').ToArray().Count();
@@ -30,7 +30,7 @@ namespace AoC
 
         public int Part2()
         {
-            var rows = Helpers.GetStringInput($@"{this.GetType().Name.Substring(3, this.GetType().Name.Length - 3)}\{MethodBase.GetCurrentMethod().Name}");
+            var rows = Helpers.GetStringInput($@"{this.GetType().Name}\{MethodBase.GetCurrentMethod().Name}");
 
             string[] mostCommon = rows;
             string[] leastCommon = rows;

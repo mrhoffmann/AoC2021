@@ -1,8 +1,8 @@
 ﻿using System.Reflection;
 
-namespace AoC
+namespace AoC.Days
 {
-    public class DayTwo : Day
+    public class Two : Day
     {
         public override (int Part1, int Part2) Run() => (
             Part1(),
@@ -17,7 +17,7 @@ namespace AoC
         /// <returns></returns>
         public virtual int Part1()
         {
-            var rows = Helpers.GetStringInput($@"{this.GetType().Name.Substring(3, this.GetType().Name.Length - 3)}\{MethodBase.GetCurrentMethod().Name}");
+            var rows = Helpers.GetStringInput($@"{this.GetType().Name}\{MethodBase.GetCurrentMethod().Name}");
             for (int i = 0; i < rows.Length; i++)
             {
                 Move(rows[i]);
@@ -33,7 +33,7 @@ namespace AoC
         public virtual int Part2()
         {
             Horizontal = 0; Depth = 0;
-            var rows = Helpers.GetStringInput($@"{this.GetType().Name.Substring(3, this.GetType().Name.Length - 3)}\{MethodBase.GetCurrentMethod().Name}");
+            var rows = Helpers.GetStringInput($@"{this.GetType().Name}\{MethodBase.GetCurrentMethod().Name}");
             for (int i = 0; i < rows.Length; i++)
             {
                 MoveP2(rows[i]);

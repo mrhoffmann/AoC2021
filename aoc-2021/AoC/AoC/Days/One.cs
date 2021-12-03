@@ -1,8 +1,8 @@
 ﻿using System.Reflection;
 
-namespace AoC
+namespace AoC.Days
 {
-    public class DayOne : Day
+    public class One : Day
     {
         public override (int Part1, int Part2) Run() => (
             Part1(),
@@ -12,7 +12,7 @@ namespace AoC
         public int Part1()
         {
             var countsIncremented = 1;
-            var rows = Helpers.GetIntInput($@"{this.GetType().Name.Substring(3, this.GetType().Name.Length - 3)}\{MethodBase.GetCurrentMethod().Name}");
+            var rows = Helpers.GetIntInput($@"{this.GetType().Name}\{MethodBase.GetCurrentMethod().Name}");
 
             for (var i = 1; i < rows.Length - 1; i++)
             {
@@ -25,7 +25,7 @@ namespace AoC
         public int Part2()
         {
             int previousSum = 0, countsIncremented = 0;
-            var rows = Helpers.GetIntInput($@"{this.GetType().Name.Substring(3, this.GetType().Name.Length - 3)}\{MethodBase.GetCurrentMethod().Name}");
+            var rows = Helpers.GetIntInput($@"{this.GetType().Name}\{MethodBase.GetCurrentMethod().Name}");
 
             for (var i = 1; i < rows.Length - 1; i++)
             {
