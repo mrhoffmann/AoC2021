@@ -1,21 +1,23 @@
-﻿namespace AoC
-{
-    public class DayTwo
-    {
-        public (int Part1, int Part2) Run(string day) =>  (
-            new Excersize().Run(Helpers.GetStringInput($@"{day}\Part1")),
-            new ExcersizeTwo().Run(Helpers.GetStringInput($@"{day}\Part2"))
-        );
-    }
+﻿using System.Reflection;
 
-    public abstract class Orientation
+namespace AoC
+{
+    public class DayTwo : Day
     {
+        public override (int Part1, int Part2) Run() => (
+            Part1(),
+            Part2()
+        );
+
+        private int Aim, Horizontal, Depth;
+
         /// <summary>
         /// What do you get if you multiply your final horizontal position by your final depth?
         /// </summary>
         /// <returns></returns>
-        public virtual int Run(string[] rows)
+        public virtual int Part1()
         {
+            var rows = Helpers.GetStringInput($@"{this.GetType().Name.Substring(3, this.GetType().Name.Length - 3)}\{MethodBase.GetCurrentMethod().Name}");
             for (int i = 0; i < rows.Length; i++)
             {
                 Move(rows[i]);
@@ -23,51 +25,41 @@
             return Calculate();
         }
 
-        /// <summary>
-        /// Run a calculation
-        /// </summary>
-        /// <returns></returns>
-        protected abstract int Calculate();
+        private int Calculate() => Horizontal * Depth * -1;
+        private void MoveDown(int n) => Depth -= n;
+        private void MoveUp(int n) => Depth += n;
+        private void MoveForward(int n) => Horizontal += n;
 
-        /// <summary>
-        /// Forward and backwards axis.
-        /// </summary>
-        protected int Horizontal { get; set; }
+        public virtual int Part2()
+        {
+            Horizontal = 0; Depth = 0;
+            var rows = Helpers.GetStringInput($@"{this.GetType().Name.Substring(3, this.GetType().Name.Length - 3)}\{MethodBase.GetCurrentMethod().Name}");
+            for (int i = 0; i < rows.Length; i++)
+            {
+                MoveP2(rows[i]);
+            }
+            return CalculateP2();
+        }
 
-        /// <summary>
-        /// Up and down axis.
-        /// </summary>
-        protected int Depth { get; set; }
-
-        /// <summary>
-        /// Move the submarine down
-        /// </summary>
-        /// <param name="n"></param>
-        protected abstract void MoveDown(int n);
-
-        /// <summary>
-        /// Move the submarine up
-        /// </summary>
-        /// <param name="n"></param>
-        protected abstract void MoveUp(int n);
-
-        /// <summary>
-        /// Move the submarine forward
-        /// </summary>
-        /// <param name="n"></param>
-        protected abstract void MoveForward(int n);
+        private int CalculateP2() => Horizontal * Depth;
+        private void MoveDownP2(int n) => Aim += n;
+        private void MoveUpP2(int n) => Aim -= n;
+        private void MoveForwardP2(int n)
+        {
+            Horizontal += n;
+            Depth += Aim * n;
+        }
 
         /// <summary>
         /// Determine what direction is suited
         /// </summary>
         /// <param name="s">up/forward/down direction with the value number</param>
-        protected virtual void Move(string s)
+        private void Move(string s)
         {
             var direction = s.Substring(0, s.IndexOf(' '));
-            System.Text.RegularExpressions.Regex r = new System.Text.RegularExpressions.Regex($@"{direction} (\d)");
             var extractedValue = Helpers.IntegerValueFromDirection(s);
 
-            if (r.IsMatch(s))
+            if (new System.Text.RegularExpressions.Regex($@"{direction} (\d)").IsMatch(s))
             {
                 switch (direction)
                 {
@@ -83,36 +75,31 @@
                 }
             }
         }
-    }
-
-    /// <summary>
-    /// Part 1
-    /// </summary>
-    public class Excersize : Orientation
-    {
-        protected override int Calculate() => Horizontal* Depth * -1;
-        protected override void MoveDown(int n) => Depth -= n;
-        protected override void MoveUp(int n) => Depth += n;
-        protected override void MoveForward(int n) => Horizontal += n;
-    }
-
-    /// <summary>
-    /// Part 2
-    /// </summary>
-    public class ExcersizeTwo : Orientation
-    {
-        protected override int Calculate() => Horizontal * Depth;
-
         /// <summary>
-        /// Positional variable
+        /// Determine what direction is suited
         /// </summary>
-        private int Aim;
-        protected override void MoveDown(int n) => Aim += n;
-        protected override void MoveUp(int n) => Aim -= n;
-        protected override void MoveForward(int n)
+        /// <param name="s">up/forward/down direction with the value number</param>
+        private void MoveP2(string s)
         {
-            Horizontal += n;
-            Depth += Aim * n;
+            var direction = s.Substring(0, s.IndexOf(' '));
+            System.Text.RegularExpressions.Regex r = new System.Text.RegularExpressions.Regex($@"{direction} (\d)");
+            var extractedValue = Helpers.IntegerValueFromDirection(s);
+
+            if (r.IsMatch(s))
+            {
+                switch (direction)
+                {
+                    case "forward":
+                        MoveForwardP2(extractedValue);
+                        break;
+                    case "down":
+                        MoveDownP2(extractedValue);
+                        break;
+                    case "up":
+                        MoveUpP2(extractedValue);
+                        break;
+                }
+            }
         }
     }
 }

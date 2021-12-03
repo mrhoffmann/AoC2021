@@ -1,16 +1,18 @@
-﻿namespace AoC
+﻿using System.Reflection;
+
+namespace AoC
 {
-    public class DayOne
+    public class DayOne : Day
     {
-        public (int Part1, int Part2) Run(string day) => (
-            Excersize(day),
-            ExcersizeTwo(day)
+        public override (int Part1, int Part2) Run() => (
+            Part1(),
+            Part2()
         );
 
-        public int Excersize(string day)
+        public int Part1()
         {
             var countsIncremented = 1;
-            var rows = Helpers.GetIntInput($@"{day}\Part1");
+            var rows = Helpers.GetIntInput($@"{this.GetType().Name.Substring(3, this.GetType().Name.Length - 3)}\{MethodBase.GetCurrentMethod().Name}");
 
             for (var i = 1; i < rows.Length - 1; i++)
             {
@@ -20,10 +22,10 @@
             return countsIncremented;
         }
 
-        public int ExcersizeTwo(string day)
+        public int Part2()
         {
             int previousSum = 0, countsIncremented = 0;
-            var rows = Helpers.GetIntInput($@"{day}\Part2");
+            var rows = Helpers.GetIntInput($@"{this.GetType().Name.Substring(3, this.GetType().Name.Length - 3)}\{MethodBase.GetCurrentMethod().Name}");
 
             for (var i = 1; i < rows.Length - 1; i++)
             {

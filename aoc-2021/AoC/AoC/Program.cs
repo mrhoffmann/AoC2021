@@ -7,15 +7,16 @@ namespace AoC
     {
         static void Main(string[] args)
         {
-            foreach 
+            foreach
             (
                 var type in (from a in AppDomain.CurrentDomain.GetAssemblies() from b in a.GetTypes() select b)
-                .Where(c => c.Name.StartsWith("Day") && 
-                !(new string[]
-                {
-                    "DayOfWeek",
-                    "DaylightTime",
-                    "DaylightTimeStruct"
+                .Where(c => c.Name.StartsWith("Day") &&
+                !(
+                    new string[] {
+                        "Day",
+                        "DayOfWeek",
+                        "DaylightTime",
+                        "DaylightTimeStruct"
                 })
                 .Contains(c.Name))
                 .ToList()
@@ -30,14 +31,14 @@ namespace AoC
                         .GetConstructor(Type.EmptyTypes)
                         .Invoke(
                             new object[] { }),
-                            new object[] { type.Name.Substring(3, type.Name.Length - 3) })
+                            new object[] { })
                                 .ToString()
                                 .Replace("(", string.Empty)
                                 .Replace(")", string.Empty)
                                 .Split(new char[] { ',' });
 
                 for(var i = 0; i < values.Length; i++)
-                    Console.WriteLine($"\tPart {i}: {values[i].Trim()}");
+                    Console.WriteLine($"\tPart {i}\t{values[i].Trim()}");
             }
             Console.ReadKey();
         }
