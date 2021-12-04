@@ -7,5 +7,7 @@
         /// </summary>
         /// <returns></returns>
         public abstract (int Part1, int Part2) Run();
+        public abstract int Part1();
+        public abstract int Part2();
     }
 }

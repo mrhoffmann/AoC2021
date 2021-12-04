@@ -16,6 +16,9 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
+  <PropertyGroup>
+   <LangVersion>preview</LangVersion>
+</PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
@@ -25,6 +28,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -50,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Days\Day.cs" />
+    <Compile Include="Days\Four.cs" />
     <Compile Include="Days\One.cs" />
     <Compile Include="Days\Three.cs" />
     <Compile Include="Days\Two.cs" />
@@ -62,6 +67,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Inputs\Days\Four\Part1.txt" />
+    <Content Include="Inputs\Days\Four\Part2.txt" />
     <Content Include="Inputs\Days\Three\Part1.txt" />
     <Content Include="Inputs\Days\Three\Part2.txt" />
     <Content Include="Inputs\Days\Two\Part1.txt" />

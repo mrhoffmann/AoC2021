@@ -15,9 +15,9 @@ namespace AoC.Days
         /// What do you get if you multiply your final horizontal position by your final depth?
         /// </summary>
         /// <returns></returns>
-        public virtual int Part1()
+        public override int Part1()
         {
-            var rows = Helpers.GetStringInput($@"{this.GetType().Name}\{MethodBase.GetCurrentMethod().Name}");
+            var rows = Helpers.GetStringInput($@"{GetType().Name}\{System.Reflection.MethodBase.GetCurrentMethod().Name}")
             for (int i = 0; i < rows.Length; i++)
             {
                 Move(rows[i]);
@@ -30,10 +30,10 @@ namespace AoC.Days
         private void MoveUp(int n) => Depth += n;
         private void MoveForward(int n) => Horizontal += n;
 
-        public virtual int Part2()
+        public override int Part2()
         {
             Horizontal = 0; Depth = 0;
-            var rows = Helpers.GetStringInput($@"{this.GetType().Name}\{MethodBase.GetCurrentMethod().Name}");
+            var rows = Helpers.GetStringInput($@"{GetType().Name}\{System.Reflection.MethodBase.GetCurrentMethod().Name}")
             for (int i = 0; i < rows.Length; i++)
             {
                 MoveP2(rows[i]);

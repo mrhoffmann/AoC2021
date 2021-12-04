@@ -1,6 +1,4 @@
-﻿using System.Reflection;
-
-namespace AoC.Days
+﻿namespace AoC.Days
 {
     public class One : Day
     {
@@ -9,10 +7,10 @@ namespace AoC.Days
             Part2()
         );
 
-        public int Part1()
+        public override int Part1()
         {
             var countsIncremented = 1;
-            var rows = Helpers.GetIntInput($@"{this.GetType().Name}\{MethodBase.GetCurrentMethod().Name}");
+            var rows = Helpers.GetIntInput($@"{GetType().Name}\{System.Reflection.MethodBase.GetCurrentMethod().Name}");
 
             for (var i = 1; i < rows.Length - 1; i++)
             {
@@ -22,10 +20,10 @@ namespace AoC.Days
             return countsIncremented;
         }
 
-        public int Part2()
+        public override int Part2()
         {
             int previousSum = 0, countsIncremented = 0;
-            var rows = Helpers.GetIntInput($@"{this.GetType().Name}\{MethodBase.GetCurrentMethod().Name}");
+            var rows = Helpers.GetIntInput($@"{GetType().Name}\{System.Reflection.MethodBase.GetCurrentMethod().Name}");
 
             for (var i = 1; i < rows.Length - 1; i++)
             {

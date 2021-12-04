@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Linq;
-using System.Reflection;
 
 namespace AoC.Days
 {
@@ -13,9 +12,9 @@ namespace AoC.Days
             return (Part1(), Part2());
         }
 
-        public int Part1()
+        public override int Part1()
         {
-            var rows = Helpers.GetStringInput($@"{this.GetType().Name}\{MethodBase.GetCurrentMethod().Name}");
+            var rows = Helpers.GetStringInput($@"{GetType().Name}\{System.Reflection.MethodBase.GetCurrentMethod().Name}")
 
             for (var i = 0; i < rows[0].Length; i++) {
                 var zeroes = rows.Where(x => x[i] == '0').ToArray().Count();
@@ -28,9 +27,9 @@ namespace AoC.Days
             return Convert.ToInt32(Gamma, 2) * Convert.ToInt32(Epsilon, 2);
         }
 
-        public int Part2()
+        public override int Part2()
         {
-            var rows = Helpers.GetStringInput($@"{this.GetType().Name}\{MethodBase.GetCurrentMethod().Name}");
+            var rows = Helpers.GetStringInput($@"{GetType().Name}\{System.Reflection.MethodBase.GetCurrentMethod().Name}")
 
             string[] mostCommon = rows;
             string[] leastCommon = rows;
