@@ -1,22 +1,14 @@
-﻿using System.Reflection;
-
-namespace AoC.Days
+﻿namespace AoC.Days
 {
     public class Two : Day
     {
         private int Aim, Horizontal, Depth;
 
-        /// <summary>
-        /// What do you get if you multiply your final horizontal position by your final depth?
-        /// </summary>
-        /// <returns></returns>
         public override string Part1()
         {
             var rows = Helpers.GetStringInput($@"{GetType().Name}\{System.Reflection.MethodBase.GetCurrentMethod().Name}");
             for (int i = 0; i < rows.Length; i++)
-            {
                 Move(rows[i]);
-            }
             return Calculate().ToString();
         }
 
@@ -30,9 +22,7 @@ namespace AoC.Days
             Horizontal = 0; Depth = 0;
             var rows = Helpers.GetStringInput($@"{GetType().Name}\{System.Reflection.MethodBase.GetCurrentMethod().Name}");
             for (int i = 0; i < rows.Length; i++)
-            {
                 MoveP2(rows[i]);
-            }
             return CalculateP2().ToString();
         }
 
@@ -45,17 +35,12 @@ namespace AoC.Days
             Depth += Aim * n;
         }
 
-        /// <summary>
-        /// Determine what direction is suited
-        /// </summary>
-        /// <param name="s">up/forward/down direction with the value number</param>
         private void Move(string s)
         {
             var direction = s.Substring(0, s.IndexOf(' '));
             var extractedValue = Helpers.IntegerValueFromDirection(s);
 
             if (new System.Text.RegularExpressions.Regex($@"{direction} (\d)").IsMatch(s))
-            {
                 switch (direction)
                 {
                     case "forward":
@@ -68,12 +53,8 @@ namespace AoC.Days
                         MoveUp(extractedValue);
                         break;
                 }
-            }
         }
-        /// <summary>
-        /// Determine what direction is suited
-        /// </summary>
-        /// <param name="s">up/forward/down direction with the value number</param>
+
         private void MoveP2(string s)
         {
             var direction = s.Substring(0, s.IndexOf(' '));
@@ -81,7 +62,6 @@ namespace AoC.Days
             var extractedValue = Helpers.IntegerValueFromDirection(s);
 
             if (r.IsMatch(s))
-            {
                 switch (direction)
                 {
                     case "forward":
@@ -94,7 +74,6 @@ namespace AoC.Days
                         MoveUpP2(extractedValue);
                         break;
                 }
-            }
         }
     }
 }

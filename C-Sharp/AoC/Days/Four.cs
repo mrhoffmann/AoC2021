@@ -12,24 +12,16 @@ namespace AoC.Days
             (List<Cell[,]> boards, int[] numbers) = ParseInput(Helpers.GetStringInput($@"{GetType().Name}\{System.Reflection.MethodBase.GetCurrentMethod().Name}"));
 
             foreach (int number in numbers)
-            {
                 foreach (var board in boards)
-                {
                     for (int r = 0; r < 5; ++r)
-                    {
                         for (int c = 0; c < 5; ++c)
                         {
                             if (board[c, r].Number == number)
                                 board[c, r].State = true;
 
                             if (IsState(board))
-                            {
                                 return GetScore(board, number).ToString();
-                            }
                         }
-                    }
-                }
-            }
             return "0";
         }
 
@@ -39,11 +31,8 @@ namespace AoC.Days
             List<(Cell[,] Board, int Score)> winningBoards = new();
 
             foreach (int number in numbers)
-            {
                 foreach (var board in boards)
-                {
                     for (int r = 0; r < 5; ++r)
-                    {
                         for (int c = 0; c < 5; ++c)
                         {
                             if (board[c, r].Number == number)
@@ -56,9 +45,6 @@ namespace AoC.Days
                                     winningBoards.Add((board, score));
                             }
                         }
-                    }
-                }
-            }
 
             int result = winningBoards.Last().Score;
             return result.ToString();

@@ -20,3 +20,14 @@ C:\Users\Hoffmann\Documents\AoC 2021\AoC\AoC\obj\Debug\AoC.csproj.CoreCompileInp
 C:\Users\Hoffmann\Documents\AoC 2021\AoC\AoC\obj\Debug\AoC.csproj.CopyComplete
 C:\Users\Hoffmann\Documents\AoC 2021\AoC\AoC\obj\Debug\AoC.exe
 C:\Users\Hoffmann\Documents\AoC 2021\AoC\AoC\obj\Debug\AoC.pdb
+C:\Users\Hoffmann\Documents\AoC 2021\C-Sharp\AoC\bin\Debug\AoC.exe.config
+C:\Users\Hoffmann\Documents\AoC 2021\C-Sharp\AoC\bin\Debug\AoC.exe
+C:\Users\Hoffmann\Documents\AoC 2021\C-Sharp\AoC\bin\Debug\AoC.pdb
+C:\Users\Hoffmann\Documents\AoC 2021\C-Sharp\AoC\bin\Debug\nunit.framework.dll
+C:\Users\Hoffmann\Documents\AoC 2021\C-Sharp\AoC\bin\Debug\nunit.framework.xml
+C:\Users\Hoffmann\Documents\AoC 2021\C-Sharp\AoC\obj\Debug\AoC.csproj.AssemblyReference.cache
+C:\Users\Hoffmann\Documents\AoC 2021\C-Sharp\AoC\obj\Debug\AoC.csproj.SuggestedBindingRedirects.cache
+C:\Users\Hoffmann\Documents\AoC 2021\C-Sharp\AoC\obj\Debug\AoC.csproj.CoreCompileInputs.cache
+C:\Users\Hoffmann\Documents\AoC 2021\C-Sharp\AoC\obj\Debug\AoC.csproj.CopyComplete
+C:\Users\Hoffmann\Documents\AoC 2021\C-Sharp\AoC\obj\Debug\AoC.exe
+C:\Users\Hoffmann\Documents\AoC 2021\C-Sharp\AoC\obj\Debug\AoC.pdb

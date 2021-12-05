@@ -8,9 +8,7 @@
             var rows = Helpers.GetIntInput($@"{GetType().Name}\{System.Reflection.MethodBase.GetCurrentMethod().Name}");
 
             for (var i = 1; i < rows.Length - 1; i++)
-            {
                 countsIncremented += rows[i - 1] < rows[i] ? 1 : 0;
-            }
 
             return countsIncremented.ToString();
         }
