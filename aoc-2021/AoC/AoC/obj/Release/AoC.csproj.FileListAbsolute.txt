@@ -1,0 +1,11 @@
+C:\Users\Hoffmann\Documents\AoC 2021\aoc-2021\AoC\AoC\bin\Release\AoC.exe.config
+C:\Users\Hoffmann\Documents\AoC 2021\aoc-2021\AoC\AoC\bin\Release\AoC.exe
+C:\Users\Hoffmann\Documents\AoC 2021\aoc-2021\AoC\AoC\bin\Release\AoC.pdb
+C:\Users\Hoffmann\Documents\AoC 2021\aoc-2021\AoC\AoC\bin\Release\nunit.framework.dll
+C:\Users\Hoffmann\Documents\AoC 2021\aoc-2021\AoC\AoC\bin\Release\nunit.framework.xml
+C:\Users\Hoffmann\Documents\AoC 2021\aoc-2021\AoC\AoC\obj\Release\AoC.csproj.AssemblyReference.cache
+C:\Users\Hoffmann\Documents\AoC 2021\aoc-2021\AoC\AoC\obj\Release\AoC.csproj.SuggestedBindingRedirects.cache
+C:\Users\Hoffmann\Documents\AoC 2021\aoc-2021\AoC\AoC\obj\Release\AoC.csproj.CoreCompileInputs.cache
+C:\Users\Hoffmann\Documents\AoC 2021\aoc-2021\AoC\AoC\obj\Release\AoC.csproj.CopyComplete
+C:\Users\Hoffmann\Documents\AoC 2021\aoc-2021\AoC\AoC\obj\Release\AoC.exe
+C:\Users\Hoffmann\Documents\AoC 2021\aoc-2021\AoC\AoC\obj\Release\AoC.pdb

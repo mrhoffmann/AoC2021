@@ -4,25 +4,20 @@ namespace AoC.Days
 {
     public class Two : Day
     {
-        public override (int Part1, int Part2) Run() => (
-            Part1(),
-            Part2()
-        );
-
         private int Aim, Horizontal, Depth;
 
         /// <summary>
         /// What do you get if you multiply your final horizontal position by your final depth?
         /// </summary>
         /// <returns></returns>
-        public override int Part1()
+        public override string Part1()
         {
-            var rows = Helpers.GetStringInput($@"{GetType().Name}\{System.Reflection.MethodBase.GetCurrentMethod().Name}")
+            var rows = Helpers.GetStringInput($@"{GetType().Name}\{System.Reflection.MethodBase.GetCurrentMethod().Name}");
             for (int i = 0; i < rows.Length; i++)
             {
                 Move(rows[i]);
             }
-            return Calculate();
+            return Calculate().ToString();
         }
 
         private int Calculate() => Horizontal * Depth * -1;
@@ -30,15 +25,15 @@ namespace AoC.Days
         private void MoveUp(int n) => Depth += n;
         private void MoveForward(int n) => Horizontal += n;
 
-        public override int Part2()
+        public override string Part2()
         {
             Horizontal = 0; Depth = 0;
-            var rows = Helpers.GetStringInput($@"{GetType().Name}\{System.Reflection.MethodBase.GetCurrentMethod().Name}")
+            var rows = Helpers.GetStringInput($@"{GetType().Name}\{System.Reflection.MethodBase.GetCurrentMethod().Name}");
             for (int i = 0; i < rows.Length; i++)
             {
                 MoveP2(rows[i]);
             }
-            return CalculateP2();
+            return CalculateP2().ToString();
         }
 
         private int CalculateP2() => Horizontal * Depth;

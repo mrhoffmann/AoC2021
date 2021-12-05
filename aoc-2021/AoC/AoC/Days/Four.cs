@@ -5,14 +5,9 @@ namespace AoC.Days
 {
     internal class Four : Day
     {
-        public override (int Part1, int Part2) Run()
-        {
-            return (Part1(), Part2());
-        }
-
         private record struct Cell(int Number, bool State);
 
-        public override int Part1()
+        public override string Part1()
         {
             (List<Cell[,]> boards, int[] numbers) = ParseInput(Helpers.GetStringInput($@"{GetType().Name}\{System.Reflection.MethodBase.GetCurrentMethod().Name}"));
 
@@ -29,16 +24,16 @@ namespace AoC.Days
 
                             if (IsState(board))
                             {
-                                return GetScore(board, number);
+                                return GetScore(board, number).ToString();
                             }
                         }
                     }
                 }
             }
-            return 0;
+            return "0";
         }
 
-        public override int Part2()
+        public override string Part2()
         {
             (List<Cell[,]> boards, int[] numbers) = ParseInput(Helpers.GetStringInput($@"{GetType().Name}\{System.Reflection.MethodBase.GetCurrentMethod().Name}"));
             List<(Cell[,] Board, int Score)> winningBoards = new();
@@ -66,7 +61,7 @@ namespace AoC.Days
             }
 
             int result = winningBoards.Last().Score;
-            return result;
+            return result.ToString();
         }
 
         private (List<Cell[,]> Boards, int[] Number) ParseInput(string[] input)

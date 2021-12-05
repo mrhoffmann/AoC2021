@@ -17,8 +17,8 @@
     </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup>
-   <LangVersion>preview</LangVersion>
-</PropertyGroup>
+    <LangVersion>preview</LangVersion>
+  </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Days\Day.cs" />
+    <Compile Include="Days\Five.cs" />
     <Compile Include="Days\Four.cs" />
     <Compile Include="Days\One.cs" />
     <Compile Include="Days\Three.cs" />
@@ -67,6 +68,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Inputs\Days\Five\Part1.txt" />
+    <Content Include="Inputs\Days\Five\Part2.txt" />
     <Content Include="Inputs\Days\Four\Part1.txt" />
     <Content Include="Inputs\Days\Four\Part2.txt" />
     <Content Include="Inputs\Days\Three\Part1.txt" />

@@ -2,12 +2,7 @@
 {
     public class One : Day
     {
-        public override (int Part1, int Part2) Run() => (
-            Part1(),
-            Part2()
-        );
-
-        public override int Part1()
+        public override string Part1()
         {
             var countsIncremented = 1;
             var rows = Helpers.GetIntInput($@"{GetType().Name}\{System.Reflection.MethodBase.GetCurrentMethod().Name}");
@@ -17,10 +12,10 @@
                 countsIncremented += rows[i - 1] < rows[i] ? 1 : 0;
             }
 
-            return countsIncremented;
+            return countsIncremented.ToString();
         }
 
-        public override int Part2()
+        public override string Part2()
         {
             int previousSum = 0, countsIncremented = 0;
             var rows = Helpers.GetIntInput($@"{GetType().Name}\{System.Reflection.MethodBase.GetCurrentMethod().Name}");
@@ -35,7 +30,7 @@
                 countsIncremented += previousSum > 0 && sum > previousSum ? 1 : 0;
                 previousSum = sum;
             }
-            return countsIncremented;
+            return countsIncremented.ToString();
         }
     }
 }

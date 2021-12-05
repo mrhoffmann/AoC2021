@@ -7,14 +7,9 @@ namespace AoC.Days
     {
         private string Gamma, Epsilon;
 
-        public override (int Part1, int Part2) Run()
+        public override string Part1()
         {
-            return (Part1(), Part2());
-        }
-
-        public override int Part1()
-        {
-            var rows = Helpers.GetStringInput($@"{GetType().Name}\{System.Reflection.MethodBase.GetCurrentMethod().Name}")
+            var rows = Helpers.GetStringInput($@"{GetType().Name}\{System.Reflection.MethodBase.GetCurrentMethod().Name}");
 
             for (var i = 0; i < rows[0].Length; i++) {
                 var zeroes = rows.Where(x => x[i] == '0').ToArray().Count();
@@ -24,12 +19,12 @@ namespace AoC.Days
                 Epsilon += ones < zeroes ? "1" : "0";
             }
 
-            return Convert.ToInt32(Gamma, 2) * Convert.ToInt32(Epsilon, 2);
+            return (Convert.ToInt32(Gamma, 2) * Convert.ToInt32(Epsilon, 2)).ToString();
         }
 
-        public override int Part2()
+        public override string Part2()
         {
-            var rows = Helpers.GetStringInput($@"{GetType().Name}\{System.Reflection.MethodBase.GetCurrentMethod().Name}")
+            var rows = Helpers.GetStringInput($@"{GetType().Name}\{System.Reflection.MethodBase.GetCurrentMethod().Name}");
 
             string[] mostCommon = rows;
             string[] leastCommon = rows;
@@ -42,7 +37,7 @@ namespace AoC.Days
                     leastCommon = LeastCommon(leastCommon, i);
             }
 
-            return Convert.ToInt32(mostCommon[0].ToString(), 2) * Convert.ToInt32(leastCommon[0].ToString(), 2);
+            return (Convert.ToInt32(mostCommon[0].ToString(), 2) * Convert.ToInt32(leastCommon[0].ToString(), 2)).ToString();
         }
 
         private string[] MostCommon(string[] rows, int pos=0)

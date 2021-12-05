@@ -226,7 +226,6 @@ namespace AoC
             }
 
             Debug.WriteLine(Table.Output);
-
             Console.ReadKey();
         }
     }
