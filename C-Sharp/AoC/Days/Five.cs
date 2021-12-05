@@ -15,21 +15,18 @@ namespace AoC.Days
             {
                 var (lx, ly, rx, ry) = GetCoords(row);
 
+                var yDiff = ly - ry;
+                var xDiff = lx - rx;
                 if (ly == ry || lx == rx)
                 {
-                    var yDiff = ly - ry;
-                    var xDiff = lx - rx;
                     for (var i = 0; i < Math.Abs(xDiff) + 1; i++)
                         for (var j = 0; j < Math.Abs(yDiff) + 1; j++)
                             grid[lx + ((xDiff < 0) ? i : i * -1), ly + ((yDiff < 0) ? j : j * -1)]++;
                 }
                 else if((ly != ry || lx != rx) && part2)
                 {
-                    var diff = lx - rx;
-                    var xDir = lx - rx;
-                    var yDir = ly - ry;
-                    for (int xy = 0; xy < Math.Abs(diff) + 1; xy++)
-                        grid[lx + ((xDir < 0) ? xy : xy * -1), ly + ((yDir < 0) ? xy : xy * -1)]++;
+                    for (int xy = 0; xy < Math.Abs(xDiff) + 1; xy++)
+                        grid[lx + ((xDiff < 0) ? xy : xy * -1), ly + ((yDiff < 0) ? xy : xy * -1)]++;
                 }
             }
 
