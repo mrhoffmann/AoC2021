@@ -1,0 +1,8 @@
+C:\Users\Hoffmann\Documents\AoC 2021\Helpers\Aoc_Helpers\obj\Debug\Aoc_Helpers.csproj.AssemblyReference.cache
+C:\Users\Hoffmann\Documents\AoC 2021\Helpers\Aoc_Helpers\obj\Debug\Aoc_Helpers.csproj.SuggestedBindingRedirects.cache
+C:\Users\Hoffmann\Documents\AoC 2021\Helpers\Aoc_Helpers\obj\Debug\Aoc_Helpers.csproj.CoreCompileInputs.cache
+C:\Users\Hoffmann\Documents\AoC 2021\Helpers\Aoc_Helpers\bin\Debug\Aoc_Helpers.exe.config
+C:\Users\Hoffmann\Documents\AoC 2021\Helpers\Aoc_Helpers\bin\Debug\Aoc_Helpers.exe
+C:\Users\Hoffmann\Documents\AoC 2021\Helpers\Aoc_Helpers\bin\Debug\Aoc_Helpers.pdb
+C:\Users\Hoffmann\Documents\AoC 2021\Helpers\Aoc_Helpers\obj\Debug\Aoc_Helpers.exe
+C:\Users\Hoffmann\Documents\AoC 2021\Helpers\Aoc_Helpers\obj\Debug\Aoc_Helpers.pdb

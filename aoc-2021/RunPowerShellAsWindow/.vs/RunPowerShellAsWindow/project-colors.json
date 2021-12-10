@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "ed488959-e1d5-42da-abfb-f7843f319f67": {
+      "ProjectGuid": "ed488959-e1d5-42da-abfb-f7843f319f67",
+      "DisplayName": "RunPowerShellAsWindow",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

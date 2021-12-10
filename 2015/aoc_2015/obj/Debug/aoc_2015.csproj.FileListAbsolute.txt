@@ -1,0 +1,12 @@
+C:\Users\Hoffmann\Documents\AoC 2021\2015\aoc_2015\obj\Debug\aoc_2015.csproj.AssemblyReference.cache
+C:\Users\Hoffmann\Documents\AoC 2021\2015\aoc_2015\obj\Debug\aoc_2015.csproj.SuggestedBindingRedirects.cache
+C:\Users\Hoffmann\Documents\AoC 2021\2015\aoc_2015\obj\Debug\aoc_2015.csproj.CoreCompileInputs.cache
+C:\Users\Hoffmann\Documents\AoC 2021\2015\aoc_2015\bin\Debug\aoc_2015.exe.config
+C:\Users\Hoffmann\Documents\AoC 2021\2015\aoc_2015\bin\Debug\aoc_2015.exe
+C:\Users\Hoffmann\Documents\AoC 2021\2015\aoc_2015\bin\Debug\aoc_2015.pdb
+C:\Users\Hoffmann\Documents\AoC 2021\2015\aoc_2015\bin\Debug\Aoc_Helpers.exe
+C:\Users\Hoffmann\Documents\AoC 2021\2015\aoc_2015\bin\Debug\Aoc_Helpers.pdb
+C:\Users\Hoffmann\Documents\AoC 2021\2015\aoc_2015\bin\Debug\Aoc_Helpers.exe.config
+C:\Users\Hoffmann\Documents\AoC 2021\2015\aoc_2015\obj\Debug\aoc_2015.csproj.CopyComplete
+C:\Users\Hoffmann\Documents\AoC 2021\2015\aoc_2015\obj\Debug\aoc_2015.exe
+C:\Users\Hoffmann\Documents\AoC 2021\2015\aoc_2015\obj\Debug\aoc_2015.pdb

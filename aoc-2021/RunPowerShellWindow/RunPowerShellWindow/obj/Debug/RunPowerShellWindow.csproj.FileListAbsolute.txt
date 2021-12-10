@@ -1,0 +1,7 @@
+C:\Users\Hoffmann\Documents\AoC 2021\aoc-2021\RunPowerShellWindow\RunPowerShellWindow\bin\Debug\RunPowerShellWindow.exe.config
+C:\Users\Hoffmann\Documents\AoC 2021\aoc-2021\RunPowerShellWindow\RunPowerShellWindow\bin\Debug\RunPowerShellWindow.exe
+C:\Users\Hoffmann\Documents\AoC 2021\aoc-2021\RunPowerShellWindow\RunPowerShellWindow\bin\Debug\RunPowerShellWindow.pdb
+C:\Users\Hoffmann\Documents\AoC 2021\aoc-2021\RunPowerShellWindow\RunPowerShellWindow\obj\Debug\RunPowerShellWindow.csproj.SuggestedBindingRedirects.cache
+C:\Users\Hoffmann\Documents\AoC 2021\aoc-2021\RunPowerShellWindow\RunPowerShellWindow\obj\Debug\RunPowerShellWindow.csproj.CoreCompileInputs.cache
+C:\Users\Hoffmann\Documents\AoC 2021\aoc-2021\RunPowerShellWindow\RunPowerShellWindow\obj\Debug\RunPowerShellWindow.exe
+C:\Users\Hoffmann\Documents\AoC 2021\aoc-2021\RunPowerShellWindow\RunPowerShellWindow\obj\Debug\RunPowerShellWindow.pdb
